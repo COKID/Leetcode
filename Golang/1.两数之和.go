@@ -5,21 +5,18 @@
  */
 
 // @lc code=start
-package Golang
-// import (
-// 	"fmt"
-// )
 
-func TwoSum(nums []int, target int) []int {
-	for i := 0; i < len(nums)-1; i++ {
+func twoSum(nums []int, target int) []int {
+	for i, x := range nums {
 		for j := i + 1; j < len(nums); j++ {
-			if nums[i]+nums[j] == target {
+			if x+nums[j] == target {
 				return []int{i, j}
 			}
 		}
 	}
-	return []int{}
+	return nil
 }
+
 // func main()  {
 // 	a:=[]int{2,7,11,15}
 // 	fmt.Println(twoSum(a,9))
